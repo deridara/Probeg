@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+
+
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Портал для любителей бега «ПроБЕГ»</title>
+    <link rel="shortcut icon" type="image/png" href="http://probeg.org/dj_static/images/man-square2.png">
+    <link rel="apple-touch-icon" href="http://probeg.org/dj_static/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://probeg.org/dj_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://probeg.org/dj_static/css/results.css?14" />
+    <link rel="stylesheet" href="http://probeg.org/dj_static/css/likely.css?3" />
+    <link rel="stylesheet" href="http://probeg.org/dj_static/css/atc-style-blue.css" />
+<!--    -->
+    <link rel="stylesheet" href="http://probeg.org/dj_static/datatables/datatables.min.css" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+<!--    -->
+    <script src="http://probeg.org/dj_static/js/jquery.js"></script>
+    <script src="http://probeg.org/dj_static/js/results.js?21"></script>
+    <script src="http://probeg.org/dj_static/js/likely.js?2"></script>
+    <script src="http://probeg.org/dj_static/js/atc.min.js"></script>
+    <script src="http://probeg.org/dj_static/datatables/datatables.min.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+   <a href="#" class="brand"></a>
+    <div class="modal fade" id="modalSendLetter" tabindex="-1" role="dialog"></div>
+    <div class="container bg-white">
+        <nav class="navbar navbar-default" style="background-color: #dff0d8;">
+            <div class="container-fluid">
+                <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_menu" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://base.probeg.org/">ПроБЕГ</a></div>
+                <div id="navbar_menu" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Новости</a></li>
+                        <li><a href="/races/">Календарь забегов</a></li>
+                        <li><a href="/runners/name/">Участники забегов</a></li>
+                        <li><a href="/about_new_site/">Новые возможности сайта</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">КЛБМатч<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/klb/2018/invitation/">КЛБМатч–2018: Приглашение</a></li>
+                                <li><a href="/klb/application/2018/">Индивидуальная заявка</a></li>
+                                <li><a href="/klb/2018/">Текущее положение</a></li>
+                                <li><a href="/klb/events_not_in_match/2018/">Забеги, не учитывающиеся в КЛБМатче</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/payment_form">Заплатить взнос за участие в матче</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/klb/2017/">КЛБМатч–2017: итоговое положение</a></li>
+                                <li><a href="/klb/2016/">КЛБМатч–2016: итоговое положение</a></li>
+                                <li><a href="/klb/calculator/">Расчёт очков</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ещё<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/how_to_add_event/">Добавить новый забег в календарь</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/clubs/">Клубы любителей бега</a></li>
+                                <li><a href="/clubs/about/">Новые возможности для клубов</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/rating/">Рейтинг забегов</a></li>
+                                <li><a href="/results/">Все результаты</a></li>
+                                <li><a href="/news/">Все новости</a></li>
+                                <li><a href="/russia_report/2016/">Отчёт: Бег в России — 2016</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/measurement/">Сертификация трасс</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/sport_classes/">Разрядные нормативы в беге</a></li>
+                                <li><a href="/protocol/">Стандарт протокола</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/about/">О сайте</a></li>
+                                <li><a href="/about_new_site/">Новые возможности сайта</a></li>
+                                <li><a href="/how_to_help/">Как вы можете помочь сайту</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/contacts/">Контактная информация</a></li>
+                                <li><a href="#" id="send_to_info_page">Написать нам письмо</a></li>
+                                <li><a href="/social_links/">Мы в соцсетях</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/login/">Вход</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+        <div class="row">
+                <h3>Портал для любителей бега «ПроБЕГ»</h3>
+<!--
+                <div class="alert alert-warning" role="alert">
+                    Теперь оплатить участие в КЛБМатче можно
+                    <strong><a href="/payment_form" class="underlined">прямо на нашем сайте</a></strong></div>
+-->
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <h4>Уже участвуете в соревнованиях?</h4>
+                <p>Соберите вместе свои результаты с забегов со всего мира!</p>
+                <p>В нашей базе
+                    <strong><a href="/races/date_region/1/">20 107</a></strong> завершившихся забегов и <strong><a href="/results/">1 705 252</a></strong> обработанных результата, в том числе 413 952
+                    <a href="/results_binding/">привязаны к людям.</a></p>
+                <h4>Только думаете начать?</h4>
+                <p>Найдите ближайшие к вам забеги и бегите!</p>
+                <p>У нас — самый полный календарь забегов в России и сопредельных странах:
+                    <strong><a href="/races/date_region/2/">790</a></strong> предстоящих забегов, из них <strong><a href="/races/">358</a></strong> — в ближайший месяц в России, Украине и Беларуси.</p>
+                <h4>Вы — организатор забега?</h4>
+                <p>Зарегистрируйтесь, <a href="mailto:info@probeg.org">напишите нам</a> — и сможете сами оперативно обновлять информацию и добавлять новости о своих мероприятиях.</p>
+                <p class="text-center"><a href="/login/"><button type="button" class="btn btn-lg btn-success">Войти или зарегистрироваться</button></a></p><br/><br/>
+                <h4>Поиск по участникам забегов</h4>
+                <form class="form-inline" action="/runners/name/" method="GET"><input type='hidden' name='csrfmiddlewaretoken' value='31Yt2lQQt0TYGfsrojAQlgcoEg2k87RjNTxU0VUjaLqi7pQbDxe85UNOYkDWElM6' />
+                    <div class="form-group"><label class="sr-only" for="fname">Имя</label><input type="text" class="form-control" name="fname" id="fname" placeholder="Имя"></div>
+                    <div class="form-group"><label class="sr-only" for="lname">Фамилия</label><input type="text" class="form-control" name="lname" id="lname" placeholder="Фамилия"></div><button type="submit" class="btn btn-sm btn-success" name="btnSearchSubmit">Искать</button></form><br/><a href="#" class="btnAddSeries">Сообщить нам о забеге, которого нет в календаре</a><br/><br/>
+                <h4>Лидеры КЛБМатча–2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="/klb/">Полная таблица</a></h4>
+                <table class="table table-condensed table-hover">
+                    <tr>
+                        <th></th>
+                        <th>Команда</th>
+                        <th class="text-center">Участников</th>
+                        <th class="text-right">Очки</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="info text-center"><strong><a href="/klb/tab/all/">Абсолютный зачёт</a></strong></td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">1</td>
+                        <td><a href="/klb/team/712/">Парсек</a> (Москва)
+
+                        </td>
+                        <td class="text-center">100</td>
+                        <td class="text-right">561,542</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">2</td>
+                        <td><a href="/klb/team/732/">Урал-100</a> (Екатеринбург)
+
+                        </td>
+                        <td class="text-center">81</td>
+                        <td class="text-right">474,997</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">3</td>
+                        <td><a href="/klb/team/723/">Аматар</a> (Беларусь, Минск)
+
+                        </td>
+                        <td class="text-center">100</td>
+                        <td class="text-right">420,724</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="info text-center"><strong><a href="/klb/tab/medium/">Средние клубы</a></strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td class="text-right">1</td>
+                        <td><a href="/klb/team/802/">Элара</a> (Чебоксары)
+
+                        </td>
+                        <td class="text-center">33</td>
+                        <td class="text-right">366,367</td>
+                    </tr>
+                    <tr class="warning">
+                        <td class="text-right">2</td>
+                        <td><a href="/klb/team/721/">Рязань</a> (Рязань)
+
+                        </td>
+                        <td class="text-center">37</td>
+                        <td class="text-right">242,648</td>
+                    </tr>
+                    <tr class="warning">
+                        <td class="text-right">3</td>
+                        <td><a href="/klb/team/715/">Ока</a></td>
+                        <td class="text-center">40</td>
+                        <td class="text-right">240,143</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="info text-center"><strong><a href="/klb/tab/small/">Малые клубы</a></strong></td>
+                    </tr>
+                    <tr class="danger">
+                        <td class="text-right">1</td>
+                        <td><a href="/klb/team/775/">АБУ – URA</a> (Украина, Киев)
+
+                        </td>
+                        <td class="text-center">18</td>
+                        <td class="text-right">277,759</td>
+                    </tr>
+                    <tr class="danger">
+                        <td class="text-right">2</td>
+                        <td><a href="/klb/team/770/">Time4run</a> (Санкт-Петербург)
+
+                        </td>
+                        <td class="text-center">18</td>
+                        <td class="text-right">224,677</td>
+                    </tr>
+                    <tr class="danger">
+                        <td class="text-right">3</td>
+                        <td><a href="/klb/team/692/">Энергия</a> (Москва)
+
+                        </td>
+                        <td class="text-center">18</td>
+                        <td class="text-right">215,953</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="info text-center"><strong><a href="/klb/age_group/203/">Личный зачёт</a></strong></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Имя</th>
+                        <th class="text-center">Выступлений</th>
+                        <th class="text-right">Очки</th>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">1</td>
+                        <td><a href="/klb/person/1561/">Ольга Мазурёнок</a> (Беларусь, Минская область, Плещеницы)
+                        </td>
+                        <td class="text-center">3</td>
+                        <td class="text-right">38,346</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">2</td>
+                        <td><a href="/klb/person/5376/">Юрий Галкин</a> (Московская область, Люберцы)
+                        </td>
+                        <td class="text-center">3</td>
+                        <td class="text-right">34,681</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">3</td>
+                        <td><a href="/klb/person/6510/">Алина Прокопьева</a> (Чувашская Республика, Чебоксары)
+                        </td>
+                        <td class="text-center">6</td>
+                        <td class="text-right">34,160</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">4</td>
+                        <td><a href="/klb/person/5305/">Нина Савина</a> (Беларусь, Могилёвская область, Бобруйск)
+                        </td>
+                        <td class="text-center">4</td>
+                        <td class="text-right">33,667</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">5</td>
+                        <td><a href="/klb/person/3796/">Любовь Новикова</a> (Калужская область, Боровск)
+                        </td>
+                        <td class="text-center">7</td>
+                        <td class="text-right">33,471</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">6</td>
+                        <td><a href="/klb/person/7125/">Степан Киселев</a> (Чувашская Республика, Чебоксары)
+                        </td>
+                        <td class="text-center">5</td>
+                        <td class="text-right">33,087</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">7</td>
+                        <td><a href="/klb/person/6520/">Леонид Анацка</a> (Беларусь, Гродненская область, Лида)
+                        </td>
+                        <td class="text-center">21</td>
+                        <td class="text-right">32,797</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">8</td>
+                        <td><a href="/klb/person/1581/">Татьяна Свиридова</a> (Ленинградская область, Сосновый Бор)
+                        </td>
+                        <td class="text-center">22</td>
+                        <td class="text-right">32,277</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">9</td>
+                        <td><a href="/klb/person/6460/">Дарья Михайлова</a> (Украина, Киевская область, Белая Церковь)
+                        </td>
+                        <td class="text-center">8</td>
+                        <td class="text-right">32,146</td>
+                    </tr>
+                    <tr class="success">
+                        <td class="text-right">10</td>
+                        <td><a href="/klb/person/3477/">Любовь Шатунова</a> (Свердловская область, Екатеринбург)
+                        </td>
+                        <td class="text-center">6</td>
+                        <td class="text-right">30,559</td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <div class="col-md-4"><a href="/klb/invitation/">Что такое КЛБМатч?</a></div>
+                    <div class="col-md-4 text-center"><a href="http://probeg.org/klb">История КЛБМатча</a></div>
+                    <div class="col-md-4 text-right"><a href="/klb/calculator/">Расчёт очков</a></div>
+                </div><br/><br/><a name="protokol"></a>
+                <h4 class="protokol">Последние загруженные протоколы</h4>
+                <p class="protokol"><a href="http://base.probeg.org/event/18317/">Забег «Сухумский октябрь»</a>, 14&nbsp;октября 2017, Абхазия, Сухум (
+                    <nobr>1 км</nobr>,
+                    <nobr>2500 м</nobr>,
+                    <nobr>5 км</nobr>,
+                    <nobr>10 км</nobr>)&nbsp;— загружен 28.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/20087/">Шахтер-Трейл</a>, 26&nbsp;августа 2018, Беларусь, Минская область, Солигорск (
+                    <nobr>5км 130м</nobr>,
+                    <nobr>22км 850м</nobr>)&nbsp;— загружен 28.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/18414/">Триатлон «Титан»</a>, 15&nbsp;июля 2018, Удмуртская Республика, Воткинск (
+                    <nobr>5 км</nobr>,
+                    <nobr>10 км</nobr>)&nbsp;— загружен 28.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/22133/">Ironlady Kazan</a>, 3&nbsp;августа 2018, Республика Татарстан, Казань (
+                    <nobr>5 км</nobr>)&nbsp;— загружен 28.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/20009/">Ночной марафон «Евпатория»</a>, 19&nbsp;августа 2018, Республика Крым, Евпатория (
+                    <nobr>5 км</nobr>,
+                    <nobr>10 км</nobr>,
+                    <nobr>полумарафон</nobr>,
+                    <nobr>марафон</nobr>)&nbsp;— загружен 27.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/17860/">Горный ультрамарафон adidas Elbrus World Race 2018</a>, 2–5&nbsp;августа 2018, Кабардино-Балкарская Республика, Верхний Баксан (
+                    <nobr>7700 м</nobr>,
+                    <nobr>34300 м</nobr>,
+                    <nobr>46100 м</nobr>,
+                    <nobr>58600 м</nobr>,
+                    <nobr>78200 м</nobr>)&nbsp;— загружен 27.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/8560/">EAM Ночной Забег</a>, 26&nbsp;сентября 2015, Свердловская область, Екатеринбург (
+                    <nobr>5 км</nobr>)&nbsp;— загружен 27.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/22371/">VII PÓŁMARATON CHMIELAKOWY — KRASNYSTAW 2018</a>, 18&nbsp;августа 2018, Польша, Красныстав (Krasnystaw) (
+                    <nobr>полумарафон</nobr>)&nbsp;— загружен 27.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/7983/">1-й «Полумарафон любви»</a>, 14&nbsp;февраля 2015, Санкт-Петербург (
+                    <nobr>10 км</nobr>,
+                    <nobr>полумарафон</nobr>)&nbsp;— загружен 27.08.2018
+                </p>
+                <p class="protokol"><a href="http://base.probeg.org/event/17853/">Skyrunfest 2018</a>, 3–5&nbsp;августа 2018, Красноярский край, Природный парк «Ергаки» (
+                    <nobr>6 км</nobr>,
+                    <nobr>23 км</nobr>,
+                    <nobr>42 км</nobr>)&nbsp;— загружен 26.08.2018
+                </p><br/>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- For races page --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3049966672" data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div><br/><br/>
+                <div id="vk_comments_browse"></div>
+                <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+                <script type="text/javascript">
+                    VK.init({
+                        apiId: 5410674,
+                        onlyWidgets: true
+                    });
+                    VK.Widgets.CommentsBrowse('vk_comments_browse', {
+                        limit: 10
+                    });
+
+                </script>
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <h4>&nbsp;&nbsp;&nbsp;Последние новости &nbsp;&nbsp;&nbsp;
+                    <a href="/news/">Все новости</a></h4>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">27.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/22382/">Звезды легкой атлетики</a>
+							(Санкт-Петербург)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/22382/#news4810">Пробег «Звёзды Лёгкой Атлетики»</a></h4><a href="http://probeg.org/new/img/1535400586.jpg"><img src="http://probeg.org/new/img/1535400586_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 2 сентября 2018 года в 10:00, в ЦПКиО будет дан старт второму ежегодному пробегу «Звёзды Лёгкой Атлетики». Любители бега разных возрастов и действующие спортсмены будут соревноваться на дистанции 5 км по одной из самых красивых трасс Санкт-Петербурга. Забег организуется сообществом Star Track &amp; Field и Комитетом по спорту Администрации Санкт-Петербурга. Соревнование проводится в целях развития спорта в России, сохранения традиций Петербургской легкой атлетики и пропаганды здорового образа жизни, в соответствии с государственной политикой Российской Федерации в сфере физической культуры и спорта. Забег «Звёзды Лёгкой Атлетики» прсвящён выдающимся советским и российским спортсменам, являющимися гордостью и легендами спорта нашей страны. Гостями мероприятия становятся знаковые фигуры российской легкой атлетики, деятели культуры и искусства, известные учёные, такие как директор института им. Н.П...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">24.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18651/">Красноярский марафон. Открытый чемпионат Красноярского края по марафонскому бегу</a>
+							(Красноярск)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18651/#news4809">38-й	Красноярский марафон</a></h4><a href="http://probeg.org/new/img/1535137567.jpg"><img src="http://probeg.org/new/img/1535137567_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 8 сентября 2018 года в Красноярске в 38-й раз стартует Красноярский марафон. Красноярский марафон – это одно из крупных беговых событий нашего города, Красноярского края, Сибирского федерального округа. Марафон для профессионалов и любителей пройдет по живописной трассе на Левобережной набережной р. Енисей, трасса №22. Для участников доступны дистанции 42,195 км и 10,550 км. Настала твоя очередь творить историю! Присоединяйся и регистрируйся на Красноярский марафон!
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">24.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21791/">Благотворительный забег «Run with SAP»</a>
+							(Москва)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21791/#news4808">Участники благотворительного забега Run with SAP подарили год занятий воспитанникам детских домов</a></h4><a href="http://probeg.org/new/img/1535125889.jpg"><img src="http://probeg.org/new/img/1535125889_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> В Москве прошел благотворительный забег Run with SAP в поддержку фонда «Арифметика добра». Вот уже четыре года инициатива помогает собирать средства на образовательную программу "Шанс", которая позволяет сотням детей-сирот со всей России получать дополнительные онлайн-уроки с репетиторами. По результатам четвертого забега собрано более 1,2 млн рублей! Более 250 участников собрались в субботнее утро в одном из самых экологически чистых парков в Европе – Измайловском парке культуры и отдыха. Забег проходил на дистанциях 1 км, 5 км и 10 км. Команды Московского Кредитного банка, TerraLink и Группы компаний «РАМАКС» состязались в корпоративной эстафете, а дети и подростки – в забеге на 400 м. Благотворительный забег Run with SAP — это праздник спорта и добрых дел для всей семьи. Поддержать родителей пришли юные болельщики, а мамы и папы аплодировали своим героям, которые бежали не просто так, а в поддержку детей, которые остались без попечения родителей...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">24.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18308/">Международный марафон «Путь к роднику» (из серии «World Run»)</a>
+							(Челябинская область, Кыштымский округ, пос.&nbsp;Слюдорудник)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18308/#news4807">Открыта регистрация на традиционный осенний марафон "Путь к роднику"</a></h4><a href="http://probeg.org/new/img/1535092745.jpg"><img src="http://probeg.org/new/img/1535092745_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Соревнование состоится 14 октября 2018 г в 11.00 на лыжном стадионе спортивно-туристического центра «Провинция», в поселке Слюдорудник, Кыштымского округа, Челябинской области. Регистрация Дистанции марафона – один круг протяженностью 42,2 км. Дистанция полумарафона – один круг протяженностью 21,1км. Детская дистанция — один круг протяженностью 2км. Старт в Азии в поселке Слюдорудник с лыжного стадиона. В процессе преодоления дистанции участники дважды пересекают границу частей света — сначала из Азии в Европу, а затем обратно. Прямо на перевале, у северного подножья горы Беркут, установлен обелиск «Европа-Азия», из основания которого вытекает Родник. В честь этого Родника и назван наш марафон. Дорога в основном грунтовая, грейдированная, на части ее имеется автомобильное движение слабой интенсивности. Преобладают затяжные подъемы и спуски. Вокруг лес, озера, открываются виды на дальние хребты уральских гор...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">23.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18614/">Часовой бег на призы ветерана спорта Германа Скрипкина</a>
+							(Волгоград)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18614/#news4806">Часовой бег в Волгограде</a></h4><a href="http://probeg.org/new/img/1535045344.jpg"><img src="http://probeg.org/new/img/1535045344_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 12 августа 2018 в Волгограде на стадион «СК «Зенит» прошёл Часовой бег на призы ветерана спорта Германа Скрипкина Всего в старте приняли участие рекордное количество участников — 57 человек (41 мужчина и 16 женщин). Как и в прошлом году победили Егор Ручников — 17103 метров (рекорд старта) и Мария Ручникова — 13700 м. ПроБЕГ: Все результаты уже загружены в базу данных и зерегистрированные на ПроБЕГе любители бега могут их привязать к себе. Сделать это можно ЗДЕСЬ. Те, кто еще этого не сделал — РЕГИСТРИРУЙТЕСЬ. Результаты в КЛБМатч также внесены.
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div>
+                <p></p>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">23.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21213/">Рябковский кроссовый полумарафон, посвященный Дню физкультурника</a>
+							(Курган)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21213/#news4805">Продолжатель марафонских традиций!</a></h4><a href="http://probeg.org/new/img/1535041737.jpg"><img src="http://probeg.org/new/img/1535041737_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Начинателем проведения в Курганской области легкоатлетических пробегов был первый мастер спорта по легкой атлетике Георгий Комарский. В 50 – е годы по его инициативе проходил пробег на 25км. «Введенка – Курган». Участники финишировали на стадионе «Динамо». Продолжателем марафонских традиций был и остается директор школы – интерната №17 Сергей Сыренков и он же директор всех пробегов. Вот уже более четверти века он будоражит марафонцев со всей округи своей неуемной активностью. Приуроченный к Дню физкультурника, снова на опушке леса стартовал второй Рябковский кроссовый полумарафон, на который пожаловали марафонцы из Тюменской, Челябинской, Свердловской областей и Казахстана. Неожиданно много — 51 участник заявился на 21.1 км, остальная сотня набралась на 700 м. у дошколят, на 2 км. у «гтошников», на 7 км. у стайеров...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">22.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/22358/">Эстафетный легкоатлетический пробег, посвящённый 95-ти летию Нижнетавдинского района Тюменской области в год 100- летия ВЛКСМ</a>
+							(Тюмень – Тюменская область, Нижняя Тавда)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/22358/#news4804">В поход за эндорфинами!</a></h4><a href="http://probeg.org/new/img/1534962831.jpg"><img src="http://probeg.org/new/img/1534962831_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 18 августа 2018 года состоялся 80 километровый эстафетный легкоатлетический пробег, посвящённый 95-ти летию Нижнетавдинского района Тюменской области в год 100- летия ВЛКСМ, по маршруту Тюмень — Нижняя Тавда. Это был очередной забег, организованный Тюменской общественной организацией выпускников медицинского университета, пятый забег такого рода за последние 3 года: 2 раза это было по маршруту Тюмень-Ялуторовск, 1 раз – Тюмень-Талица, и 1 раз – Тюмень-Исетск. Забег был инициирован и организован нашим бессменным руководителем, исполнительным директором ТРОО выпускников ТГМУ, Станиславом Муравьевым и посвящен 100-летию Ленинского комсомола. Старт, по уже сложившейся традиции, состоялся от главного корпуса медицинского университета. Проводить 30 бегунов пришла начальник управления по воспитательной и внеучебной работе Тюменской медицинской академии — Ирина Александровна Трошина...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">22.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19004/">Пробег «Доблесть», посвящённый Дню Шахтёра и 36-й годовщине образования КЛБ «Уголёк»</a>
+							(Кемеровская область, Прокопьевск)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19004/#news4803">В Прокопьевске состоялся очередной пробег, посвященный дню Шахтеров</a></h4><a href="http://probeg.org/new/img/1534945595.jpg"><img src="http://probeg.org/new/img/1534945595_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> В очередном традиционном легкоатлетическом пробеге, посвященному дню Шахтеров, который состоялся 18 августа в г. Прокопьевск, приняли участие представители всех основных «угольных» городов Кузбасса. Приехали любители бега из Кемерово, Новокузнецка, Междуреченска, Киселевска, Мысков, Белово. Всего участников 70 человек, из них 23 преодолели основную дистанцию 21,1км. В этом году повезло с погодой. Переменная облачность, хотя и при высокой температуре (+26), все-таки лучше, чем проливной дождь, как было в прошлом году. Среди мужчин на полумарафоне в абсолютном зачете победу в упорной борьбе одержал представитель г. Прокопьевска Евгений Нигмидзянов. Евгений стабильно показывает высокие результаты и регулярно занимает призовые места на всех соревнованиях где принимает участие. Второе место у Дениса Каталкина из г. Белово, третье у Олега Иванова из Новокузнецка. Нынешний пробег оказался чисто мужским т...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">22.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19255/">43-й пробег, посвященный Дню Шахтера</a>
+							(Ростовская область, Гуково)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19255/#news4800">Полумарафон в честь Дня Шахтера</a></h4><a href="http://probeg.org/new/img/1534940968.jpg"><img src="http://probeg.org/new/img/1534940968_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 18 августа 2018 года в г. Гуково Ростовской обл.прошел 43-й традиционный межгосударственный полумарафон в честь Дня Шахтера и 140-летия г. Гуково. Дистанции были разные: 3000 м., 10000 м., 21,97 км., «Сладкий забег» 400 м. Борьба была упорная, спортсмены боролись за 1,2,3 места, бежали в жаркую погоду (до 30гр.). На трассе стояли фуршетные столы с водой, арбузами, бананами. По трассе забега курсировала машина с водой. И вот уже финиш. В абсолютном первенстве на 3000 м среди женщин стала Хруповец Дарья (12мин18сек) из Гуково. Среди мужчин абсолютным победителем стал Бомбин Владислав (11мин47сек) из Гуково. В абсолютном первенстве на 10000 м среди женщин победительницей стала Крутская Дарья (49мин09сек) из Ростова-на-Дону. Среди мужчин абсолютным победителем стал Боровик Дмитрий (41мин06сек) из г.Морозовск Ростовской обл. В абсолютном первенстве в полумарафоне (21км) победительницей среди женщин стала Симонова Наталья (1ч.49мин.11сек) г.Ростов-на-Дону...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">21.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/20501/">Ботаническая беговая забава (бронзовая)</a>
+							(Ростов-на-Дону)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/20501/#news4799">Шестичасовое беговое испытание</a></h4><a href="http://probeg.org/new/img/1534831926.png"><img src="http://probeg.org/new/img/1534831926_1.png" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 19 августа состоялось уникальное для Ростова-на-Дону соревнование под загадочным названием «Ботаническая Беговая Забава». Совершенно новое и увлекательнейшее беговое действо для ростовских бегунов и гостей города от КЛБ «Ростов Дон Бегущий». Для кого-то оно стало просто увлекательным и развлекательным соревнованием, а кому-то оказалось суровым испытанием. Всё зависело от степени готовности конкретного участника и его амбиций. Каждый участник, отталкиваясь от степени своей готовности, мог выстроить индивидуальную стратегию и тактику бегового состязания. Соревнования представляли из себя 6-часовое беговое испытание по лесам и холмам Ботанического Сада. Бежать надо всего лишь круг в 3 км, который каждый участник должен пробежать в течение получаса. Уложился в 20 минут — хорошо, у тебя есть время отдохнуть у источника 10 минут, уложился в 25 минут — на отдых остается 5 минут. Потому что ты стартуешь каждый получас, снова и снова, и так 12 раз...
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div>
+                <p></p>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">20.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/17453/">46-й пробег Малая Вишера — Большая Вишера</a>
+							(Малая Вишера – Новгородская область, Маловишерский район, пос.&nbsp;Большая Вишера)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/17453/#news4798">46-й пробег Малая Вишера — Большая Вишера</a></h4><a href="http://probeg.org/new/img/1534794239.jpg"><img src="http://probeg.org/new/img/1534794239_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 18 августа 2018 года в Новгородской оюласти состоялся 46-й пробег Малая Вишера — Большая Вишера. На открытии соревнований присутствовали: Заместитель министра, начальник отдела физической культуры и спорта — Михайлова Кристина Юрьевна Заместитель Главы Маловишерского муниципального района — Пронин Алексей Петрович Глава п. Большая Вишера — Иванов Антон Алексеевич Ветеран, принявший участие в 43-х побегах — Пресман Георгий Яковлевич Абсолютным чемпионом на дистанции 10 км среди мужчин стал спортсмен из Малой Вишеры — Фёдоров Николай с результатом 35 мин. 47 сек., среди женщин лучший результат показала Пильтенко Светлана ( 44 мин. 17 сек.) из города Великий Новгород. На пятикилометровой дистанции равных не было Маловишерским спортсменам — Коваленко Вячеслав (23 мин. 30 сек.) и Анастасии Коваленко (21 мин. 13 сек). /Голубев Сергей/
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">20.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18746/">Пробег «Длинные аллеи»</a>
+							(Ленинградская область, Гатчина)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18746/#news4797">«Длинные Аллеи» в Гатчине</a></h4><a href="http://probeg.org/new/img/1534791881.jpg"><img src="http://probeg.org/new/img/1534791881_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 19 августа 2018 г. в Гатчине состоялся традиционный пробег «Длинные Аллеи», входящий в серию пробегов #gatchinarun Всего на дистанциях 1,5, 21, 42 и 63 км стартовало 700 участников. По традиции участники встретились в стартовом городке рядом с Приоратским дворцом и пробежали по аллеям парка. Погода не подвела! Победителями в абсолютном зачете стали: 21км: Черноокий Дмитрий, Санкт-Петербург — 1:14:52 Бугаева Ольга, Санкт-Петербург — 1:36:18 42 км: Галушко Сергей, Ставрополь — 2:51:39 Дятлова Алёна, Санкт-Петербург — 3:12:19 63 км: Зыкин Артём, Санкт-Петербург — 4:26:17 Сидорова Анна, Санкт-Петербург — 5:28:43 Приглашаем принять участие в наших последующих стартах: 28 октября - «Межсезонье» 18 ноября — главный старт серии «IX ГАТЧИНСКИЙ МЕЖДУНАРОДНЫЙ ПОЛУМАРАФОН» пройдет по центральным улицам города Гатчина. На дистанциях 21 и 10 км ожидается 2500 участников! Трасса полумарафона состоит из 2 кругов по 10.5 км...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">19.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21868/">Городские легкоатлетические соревнования «Часовой бег по стадиону»</a>
+							(Мурманская область, Апатиты)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21868/#news4796">Часовой бег в Апатитах</a></h4><a href="http://probeg.org/new/img/1534711733.jpg"><img src="http://probeg.org/new/img/1534711733_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 19 августа на городском стадионе в Апатитах прошли соревнования по часовому бегу. Всего на старт забега вышел 31 участник из Апатит, Кировска, Полярных Зорей, Североморска, Мончегорска, Кандалакши и Ковдора. Уверенную победу одержал Фёдоров Денис, представитель Североморска и клуба любителей бега Апатиты с результатом 16305 м. За места со 2 по 5-ое напряженная борьба шла весь забег. В итоге "серебро" отстоял Андрей Галезник (КЛБ Апатиты), третьим был Трубецкой Павел (г. Кировск). Удалов Данил (КЛБ Апатиты) уступил призерам чуть больше 100 м и финишировал 4-ым (1-ое место в возрастной группе), пятым стал Аминов Линар, также представитель города Кировск. Очень сильно выступила Мазурмович Элина (КЛБ Апатиты, СШ "Олимп"). С результатом 13222 м она одержала уверенную победу среди женщин и набрала наибольшие очки в зачёт КЛБ-Матча среди всех участников забега. Второй финишировала Седова Анна. Даровских Дарья уступила ей всего 90 м- у неё 3-е место...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">19.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/22175/">XXVI Первенство Тюкалинского района по часовому бегу «Узнай свою скорость»</a>
+							(Омская область, Тюкалинск)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/22175/#news4795">Открытое первенство Тюкалинского муниципального района по часовому бегу  «Узнай свою скорость!»</a></h4><a href="http://probeg.org/new/img/1534686027.jpg"><img src="http://probeg.org/new/img/1534686027_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 11 августа 2018 года в г. Тюкалинске Омской области состоялся XXVI старт Открытого первенства Тюкалинского муниципального района по часовому бегу «Узнай свою скорость!», посвященный VI Межрегиональному празднику «На Тракте Тюкалинском». В состязаниях приняли участие 34 бегуна Тюкалинского района и Омской области. В течение одного часа легкоатлеты преодолевали дистанцию по улицам города (ул. Ленина, ул. 30 лет Победы, ул. Чехова, ул. Кирова) — круг из 845 метров. Счетчики тщательно наблюдали за участниками, отмечая в протоколах метры дистанции, оставленные спортсменами позади. Жители города приветствовали и подбадривали участников забега. По итогам определены победители и призеры в возрастных категориях, а также абсолютные чемпионы среди мужчин и женщин, участников забега — тюкалинцев. Ими стали: В абсолютном зачете: Наталья Джоли (г. Омск) — 14160 метров и Шлыков Николай (г. Омск) — 17161 метр; Среди тюкалинцев: Ирина Маслова (г. Тюкалинск) — 11585 метров и Седов Пётр (г...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">19.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19629/">Открытые соревнования по суточному бегу «Самопреодоление», V Кубок России по 24-часовому бегу</a>
+							(Москва)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19629/#news4794">Суточный бег «Самопреодоление», V Кубок России по суточному бегу</a></h4><a href="http://probeg.org/new/img/1534668740.jpg"><img src="http://probeg.org/new/img/1534668740_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> В Москве, в рамках суточного бега «Самопреодоление», прошел V Кубок России по 24-часовому бегу. Артём Сыстеров и Ирина Масанова — обладатели Кубка России по 24-часовому бегу. РЕКОРД РОССИИ СРЕДИ ЖЕНЩИН (!!!), лучший результат мирового сезона от Ирины Масановой + Лучший результат в России среди мужчин с 2006 года, третий в рейтинге мирового сезона от Артёма Сыстерова + Высшее мировое достижение в возрастной группе М60-64 от Юрия Галкина! Настоящая ультрабеговая феерия происходила в эти выходные на Лиственничной аллее в Москве, где проходил Кубок России по 24-часовом бегу. Были показаны восхитительные результаты, которые войдут яркой главой в историю российского сверхмарафона. Чемпионка России 2017 года, мастер спорта России международного класса Ирина Масанова (Нижегородская область) сумела побить женский рекорд страны (242,624 км), простоявший с мая 1998 года и принадлежавший Ирине Реутович. Отныне, новым ориентиром для женщин в России является результат 247, км!..
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div>
+                <p></p>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">17.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21934/">Radialka Trail Xtreme: Run & Bike Challenge</a>
+							(Московская область, Серпухов)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21934/#news4790">Всего месяц до off-road приключения золотой осени: Run&Bike Challenge. Раскрываем карты!</a></h4><a href="http://probeg.org/new/img/1534257231.jpg"><img src="http://probeg.org/new/img/1534257231_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Вас ждут отличные беговые просеки, чистейшие родники, сосны, интересный рельеф...и песочек) Броды было найти ох как не просто... но будут и они! Освежающие и живописные. Все как вы любите) Гонка пройдет на фантастическом по красоте полигоне между Серпуховым и Ступино. Участникам предлагается 2 формата участия: RUN (35-65-100 км) разметка+трек+карта BIKE (65-90-120 км) трек+карта А можно совместить! Преврати целые выходные в настоящее off-road приключение, ведь треки форматов совпадают лишь частично! Вся важная инфо о серии гонок RadialkaTrailXtreme собрана на нашем сайте https://www.radialka.ru
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">15.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21760/">XXXIV традиционный легкоатлетический пробег д. Андозеро – г. Онега</a>
+							(Онежский район, д.&nbsp;Андозеро – Архангельская область, Онега)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21760/#news4792">День физкультурника в Онеге</a></h4><a href="http://probeg.org/new/img/1534358632.jpg"><img src="http://probeg.org/new/img/1534358632_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 11 августа Онега отметила этот замечательный праздник уже традиционным XXXIV легкоатлетическим пробегом д. Андозеро – г.Онега, на старт которого вышло более 80 участников. Дистанция длиною в 13 километров начинается от изумительного по красоте озера Андозеро. Учитывая сложность трассы и жаркую погоду, установившуюся в Онеге на выходных, организаторы подготовили пункт питания, который расположился на середине пути. Старт, рывок и затяжной подъём длиной один километр. Финиш состязаний под аплодисменты зрителей на стадионе общеобразовательной школы №4. Абсолютными победителями стали архангелогородец Владислав Лукша (44:00) и онежанка Эльза Кузнецова (51:44). После финиша последнего участника состоялось награждение победителей и призёров соревнований. Торжественное шествие возглавил председатель районного Собрания депутатов Пётр Якимович Цуркан...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">14.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19165/">Часовой бег, посвященный дню физкультурника</a>
+							(Московская область, Железнодорожный)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19165/#news4791">Пробег, приуроченный к празднованию Дня Физкультурника, г. Железнодорожный</a></h4><a href="http://probeg.org/new/img/1534274395.jpg"><img src="http://probeg.org/new/img/1534274395_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 11 августа 2018 в г. Железнодорожный на стадионе Строитель прошел легкоатлетический пробег, приуроченный к празднованию Дня Физкультурника. Несмотря на довольно жаркую погоду, все участники забега проявили невероятную силу воли и успешно преодолели дистанции. После забега всех участников ждал фруктовый компот, пряники и сухари, вода, прочие вкусности. Меньше слов, больше фото! Делимся с вами фотоотчетом с праздничного мероприятия. Спасибо всем кто пришёл) Итоговый предварительный протокол результатов забега опубликован в карточке старта. Если у вас есть вопросы или комментарии, не стесняйтесь написать нам на info@klbavega.ru. Еще раз благодарим всех участников за добрые и положительные отзывы, болельщиков, судей и гостей соревнований! Вы все – победители! До скорых встреч! /Пресс-служба КЛБ Авега/ ПроБЕГ: 1...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">12.08.2018
+
+                            </h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/news/4789/">Ольга Мазуренок, Беларусь — чемпионка Европы на марафонской дистанции</a></h4><a href="http://probeg.org/new/img/1534094056.jpg"><img src="http://probeg.org/new/img/1534094056_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Поздравляем Ольгу Мазуренок и всю Беларусь с замечательной победой на Чемпионате Европы. Время победительницы — 2:26:22. Победа не далась Ольге легко. Все ужаснулись, когда на 10-м километре у Ольги пошла кровь из носа. У всех, кто смотрел репортаж, в голове родилась мысль, что Ольга сейчас сойдет. И, наверное, так сделала бы любая другая бегунья, но только не она. С окрававленным лицом Ольга бежала аж до 17-го километра, когда все-таки удалось кровь остановить. На отметке 40 км из лидирующей группы осталась только тройка спортсменок — Мазуренок, француженка Клеманс Кальвен и чешка Эва Врабцова-Нывльтова. Ольга начала "натягивать" и первой не выдержала чешка. С француженкой же борьба шла до самой финишной черты. Примерно за километр вперед попыталсь выйти Кальвен, но Ольга ее не отпустила. Визуально же было видно, что белорусская спортсменка бежит легче, чем француженка...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">11.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21435/">Трейловый забег «Вызов Арктики [Край Земли] Териберка»</a>
+							(Мурманская область, Кольский район, с.&nbsp;Териберка)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21435/#news4788">Трейловый забег «Вызов Арктики [Край Земли] Териберка». Мурманская обл</a></h4><a href="http://probeg.org/new/img/1534005231.jpg"><img src="http://probeg.org/new/img/1534005231_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 4 августа 2018 в Мурманская области в пос. Териберка прошёл Трейловый забег «Вызов Арктики [Край Земли] Териберка». Всего в нём приняли участие 106 человек (66 мужчин и 40 женщин). На дистанции полумарафон (финишировало 41 мужчина и 8 женщин) победили Денис Фёдоров (Североморск) — 1:20:17 и Александра Ретюнских (Апатиты) — 1:46:24. На дистанции 10 км (финишировало 22 мужчин и 20 женщин) победили Юрий Ганджала (Кола) — 0:44:19 и Анастасия Рыжова (Москва) — 0:50:08. На дистанции 5 км (финишировало 3 мужчин и 12 женщин) победили Виталий Кузавков (Мончегорск) — 0:25:33 и Виктория Овчинникова (Ковдор) — 0:27:26. /Фото: Антон Гейко/ ПроБЕГ: Все результаты уже загружены в базу данных и зерегистрированные на ПроБЕГе любители бега могут их привязать к себе. Сделать это можно ЗДЕСЬ. Те, кто еще этого не сделал — РЕГИСТРИРУЙТЕСЬ. Результаты в КЛБМатч также внесены...
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div>
+                <p></p>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">10.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/20833/">XXXVI Йошкар-Олинский полумарафон, посвященный Дню города</a>
+							(Республика Марий Эл, Йошкар-Ола)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/20833/#news4787">Праздник бега в столице Марийского края</a></h4><a href="http://probeg.org/new/img/1533877117.jpg"><img src="http://probeg.org/new/img/1533877117_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 11 августа 2018 года в столице Республики Марий Эл состоится XXXVI Йошкар-Олинский полумарафон, посвящённый Дню города. Большой спортивный праздник для легкоатлетов и любителей бега, посвящённый Дню города, организуют Управление по физической культуре, спорту и молодежной политике Администрации г. Йошкар-Олы, Республиканский исследовательско-консалтинговый центр и Йошкар-Олинский клуб любителей бега «Айвика». Регистрация участников на участие в XXXVI Йошкар-Олинском полумарафоне проводится на федеральном сайте «RussiaRunning» www.russiarunning.com, предстоящее событие попало в поле зрения бегунов всей России. За два дня до старта на основных дистанциях полумарафона зарегистрировалось более 200 легкоатлетов из 17 субъектов Российской Федерации. На стартовую линию 11 августа выйдут профессионалы и любители бега из 57 городов России. Соревнования проводятся на дистанциях 21,1 км, 10 км и 5 км для мужчин, женщин, юношей и девушек. Лимит времени преодоления дистанции 21,1 км – 3 часа...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">10.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21632/">Пробег «Вокруг Кремля»</a>
+							(Великий Новгород)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21632/#news4793">Пробег «Вокруг Кремля» 04.08.2018</a></h4><a href="http://probeg.org/new/img/1534458292.jpg"><img src="http://probeg.org/new/img/1534458292_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Любой стоящее дело в современной России часто начинается с инициативы отдельных людей. Когда-то в Новгороде проходило соревнование по бегу, посвященное Дню освобождения Новгород. Мероприятие проводилось 20 января, но по разным причинам спортивное весьма уважаемое мероприятие ушло в историю. Ирина Ивановна Капустян и Владимир Юрьевич Мартынов занимаются бегом не один год. Часто принимают участие в различных спортивных соревнованиях от забегов на марафонские дистанции до ориентирования на местности. Почему-то все эти мероприятия проходили в других регионах страны. Идея о возрождении беговой традиции в Новгороде давно их занимала. Интерес к бегу, как спортивному упражнению проявляется у разных людей, и такое соревновательное мероприятие могло бы объединить людей, стимулировать интерес к бегу и улучшению своего здоровья и, как следствие, к увеличению к продолжительности жизни, что актуально в наши дни и в связи с намечающейся пенсионной реформой...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">09.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/21331/">Черноморский полумарафон</a>
+							(г. Севастополь, Севастополь)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/21331/#news4786">Первый Черноморский полумарафон в Севастополе</a></h4><a href="http://probeg.org/new/img/1533801555.jpg"><img src="http://probeg.org/new/img/1533801555_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> ВФСО «Трудовые резервы» и команда Ялта марафона приглашают вас принять участие в Черноморском полумарафоне и познакомиться с Севастополем — легендарным городом моряков. Первый в истории Черноморский Полумарафон состоится уже 21 октября! Успей вписать в свой беговой календарь новый крутой ивент! - Дистанции на любой вкус и цвет (10 км, 21,1 км, эстафета 4 х 5275 м) - Асфальтовые трассы с незначительным набором высоты - Отличный шанс наконец выбраться на старт в другой город - Футболки всем участникам полумарафона и эстафеты - Крутые медали для всех финишеров — Пункты питания с вкусными и полезными продуктами на каждой дистанции - Возможность почувствовать себя настоящим моряком, пусть и на пару дней! В общем, первый Черноморский Полумарафон – must visit этой осени для каждого, кто имеет хоть какое-то отношение к бегу или же только хочет стать частью нашей огромной беговой семьи! Схема дистанции, дополнительная информация и регистрация.
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">09.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18136/">Пробег «Алуштинская аллея героев», посвящённый Дню Воздушных-десантных войск.</a>
+							(Республика Крым, Алушта)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18136/#news4784">Пробег «Алуштинская аллея героев» — путь к здоровому образу жизни</a></h4><a href="http://probeg.org/new/img/1533788859.jpg"><img src="http://probeg.org/new/img/1533788859_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> Начало августа явилось кульминацией курортного сезона в Алуште. Отдыхающих столько, что юрким марафонцам приходится лавировать между людьми в купальных костюмах на выделенной для бега трассе. Крымский мост сделал свое дело. 4 августа, в Алуште, в приморском парке состоялся Легкоатлетический Пробег «Алуштинская Аллея Героев». Температура воздуха в тени около +300С, вода +26. Марафонцы, подбадриваемые родственниками, болельщиками и отдыхающими, преодолели дистанции 1 км, 10 км, 21,1 км, марафон (42,2 км), 63,3 км и 100 км. Пробег был посвящен сразу двум прошедшим праздникам Дню Военно-Морского Флота (29 августа) и Дню Воздушно-Десантных Войск (2 августа). Приятно, что в соревнованиях участвовали представители различных уголков нашей страны от Североморска до Алушты, от Ленинградской области до Тюмени. В 9-00 был дан общий старт на все дистанции. Хорошо выступила семья Гизатулиных из Москвы – дети заняли призовые места на дистанции 1 км, а папа 2 место на дистанции 10 км...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">09.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18933/">20-й открытый областной Шербакульский полумарафон</a>
+							(Омская область, Шербакуль)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18933/#news4783">ХХ Шербакульский полумарафон</a></h4><a href="http://probeg.org/new/img/1533777880.jpg"><img src="http://probeg.org/new/img/1533777880_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> ХХ Шербакульский полумарафон проводился 21 июля 2018 г. в р.п. Шербакуль на стадионе «Факел». Общее количество участников 469 человек из Шербакульского, Калачинского,Тевризского, Усть-Ишимского,, Полтавского, Омского, Русско-Полянского районов и г. и г.Новоссибирск. Проводились традиционные забеги на 21,1 км (50 человек), 3 км (353человека), «Семейная эстафета» (4х400 м) (5 семей — 15 чел), массовый забег для дошкольников – 51человек. Абсолютными победителями на дистанции 21,1 км стали: Мужчины: 1. место – Бутрамиев Александр – Тевриз — 1,14,01 2. место – Чернявский Сергей — Шербакуль – 1,16,32 3. место – Шлыков Николай – Омск – 1,18,46 4. место – Максимов Анатолий – Омск – 1,20,51 5. место – Касимов Бикзат – Омск – 1,21,42 6. место – Ермаков Алексей – Омск – 1,23,12 Женщины: 1. место – Ковалева Марина – Полтавка – 1,15,40 2. место – Джоли Наталья- Омск – 1,32,45 3. место – Нечкина Екатерина — Омск – 1,41,15 4. место – Янковская Алена- Омск – 1,42,30 5...
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                    </script>
+                </div>
+                <p></p>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">08.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19834/">Пробег «5kaSPB — Пятерка в Удельном»</a>
+							(Санкт-Петербург)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19834/#news4785">Пробег «5kaSPB — Пятерка в Удельном»</a></h4><a href="http://probeg.org/new/img/1533789887.jpg"><img src="http://probeg.org/new/img/1533789887_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 10 июня в Санкт-Петербурге состоялся забег "5каСПб — Пятерка в Удельном" 2018. Забег посвященный празднованию Дня России традиционно собрал сильный состав участников. Старт и финиш были организованы на стадионе "Олимпийские Надежды". Мероприятие было организовано при поддержке МО Коломяги. Всю дистанцию лидировала группа из трех спортсменов: Хворостухин Павел, Захаров Борис, Харитонов Алексей. Спортсменам удалось сохранить силы до финишной части дистанции и порадовать болельщиков яркой борьбой на заключительных метрах. Так же, решив исход борьбы на стадионе перед трибуной болельщиков, финишировали ближайшие преследователи: — Забралов Виталий и Васильев Денис. Среди женщин победительницей пробега стала Петрова Анна. Шилина Алиса — вторая. Оксана Михайлова — третья. Все спортсменки из Академии л/а. Надо отметить общие высокие результаты спортсменов. Так первая тройка атлетов финишировала из 14м 45сек, а первая 20ка участников замкнулась на результате 18м 07сек...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">07.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/19092/">16-й Крыпецкий пробег «Псков — Крыпецкий монастырь»</a>
+							(Псков)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/19092/#news4782">16-й пробег «Псков — Крыпецкий монастырь»</a></h4><a href="http://probeg.org/new/img/1533662269.jpg"><img src="http://probeg.org/new/img/1533662269_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 5 августа 2018 года на трассе от Пскова до Крыпецкого монастыря состоялся 16-й л/а пробег, посвящённый памяти монастырских святых. Пробегу сопутствовала не знойная после продолжительной жары погода с отсутствием пыли на грунтовом шоссе трассы. Четвёртый раз подряд первым на на финише 15 километровой основной дистанции пробега и в этом году был лучший в настоящее время стайер Псковской области Сергей Макаревич из Невеля, показавший завидное для остальных спортсменов время 52.34. Вторым был спортсмен из города Пскова Пикалов Алексей, отстав от победителя около 4-х минут (56.57), и сразу же третьим пересёк финиш у стен монастыря также пскович Светлов Даниил (57.04). Лучшим среди группы ветеранов был неподражаемый псковский марафонец Юрий Бударин, пробежавший 15 км. почти за полтора часа (1.37.37), несмотря на его "лишь" 81 год...
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">06.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/18484/">Рыбинский полумарафон «Великий хлебный путь»</a>
+							(Ярославская область, Рыбинск)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/18484/#news4781">Рыбинский полумарафон «Великий хлебный путь»</a></h4><a href="http://probeg.org/new/img/1533585687.jpg"><img src="http://probeg.org/new/img/1533585687_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 04 августа в г. Рыбинск прошел очередной старт из серии Бегом по Золотому Кольцу — Рыбинский полумарафон «Великий хлебный путь». У мужчин на полумарафоне победил Алексей Свиридов, Нижний Новгород — 01:12:14. На дистанции 10 км первым к финишу пришёл Яценко Александр — 32:57. У женщин первенствовали: Белова Дарья из Курска на полумарафоне - 01:32:38 и Соколова Елена из п. Мурино Ленинградской области — 45:49
+
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <h4 style="margin-bottom: 0px;">06.08.2018
+
+                                <small>
+							Забег:
+							<a href="/event/17760/">СПБ полумарафон «Северная столица»</a>
+							(Санкт-Петербург)
+						</small></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4><a href="/event/17760/#news4780">Полумарафон «Северная столица». Санкт-Петербург</a></h4><a href="http://probeg.org/new/img/1533584333.jpg"><img src="http://probeg.org/new/img/1533584333_1.jpg" border="0" alt="Увеличить" hspace="5" vspace="5" align="right"/></a> 5 августа 2018 года впервые в центре Санкт-Петербурга прошел СПБ полумарафон «Северная столица» серии забегов runcomrun. Маршрут забега проходил в один круг по самым красивым местам города мимо памятников архитектуры. Участникам открылись виды на главные достопримечательности Санкт-Петербурга – Невский проспект, Спас на Крови, Казанский собор, Петропавловскую крепость, Ростральные колонны, Адмиралтейство и Исаакиевский собор. Стартово-финишный городок расположился в самом сердце города на Дворцовой площади. С 7 часов утра, несмотря на непогоду, участники и зрители пришли в стартовый городок, чтобы зарядиться атмосферой праздника и принять участие в активностях от партнеров. В 8:30 утра прозвучал стартовый выстрел для бегунов на 10 км, среди которых победителями стали Владимир Никитин среди мужчин, пробежавший за 29:29 мин. и Ирина Сергеева среди женщин, финишировавшая через 34:30 мин. В 9:10 стартовали участники полумарафона, впервые пробежавшие 21,1 км по центральным улицам города...
+                        </td>
+                    </tr>
+                </table>
+                <h4><a href="/news/">Все новости</a></h4>
+            </div>
+        </div>
+    </div>
+    <footer class="footer visible-md-block visible-lg-block">
+        <div class="col-md-12 text-center">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+
+            </script>
+        </div>
+        <div class="col-md-9">
+            &nbsp; © 2002–2017
+            <a href="/contacts/">ПроБЕГ</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://vk.com/probeg_org"><img src="http://probeg.org/dj_static/images/vk_small_square.png" alt="Наша страница на vk.com"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.facebook.com/probegorg"><img src="http://probeg.org/dj_static/images/fb_small_square.png" alt="Наша страница на Facebook"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/social_links/">Ещё</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="likely">
+                <div class="twitter">Твитнуть</div>
+                <div class="facebook">Поделиться</div>
+                <div class="vkontakte">Поделиться</div>
+                <div class="telegram">Отправить</div>
+            </div>
+        </div>
+        <div class="col-md-3 text-right">
+            Старая версия сайта: <a href="http://probeg.org">probeg.org</a></div>
+    </footer>
+    <footer class="footer visible-sm-block visible-xs-block">
+        <div class="col-md-12 text-center">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Mobile footer --><ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="9469537076"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+
+            </script>
+        </div>
+        <div class="col-md-9"><a href="https://vk.com/probeg_org"><img src="http://probeg.org/dj_static/images/vk_small_square.png" alt="Наша страница на vk.com"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://facebook.com/probegorg"><img src="http://probeg.org/dj_static/images/fb_small_square.png" alt="Наша страница на Facebook"/></a><br/><br/>
+            <div class="likely">
+                <div class="twitter">Твитнуть</div>
+                <div class="facebook">Поделиться</div>
+                <div class="vkontakte">Поделиться</div>
+                <div class="telegram">Отправить</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://probeg.org/dj_static/js/bootstrap.min.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter38500270 = new Ya.Metrika2({
+                        id: 38500270,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {}
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function() {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks2");
+
+    </script><noscript><div><img src="https://mc.yandex.ru/watch/38500270" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-81201557-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!--Rating@Mail.ru COUNTER-->
+    <script language="JavaScript">
+        <!--
+        d = document;
+        a = '';
+        a += ';r=' + escape(d.referrer)
+        js = 10 //-->
+
+    </script>
+    <script language="JavaScript1.1">
+        <!--
+        a += ';j=' + navigator.javaEnabled()
+        js = 11 //-->
+
+    </script>
+    <script language="JavaScript1.2">
+        <!--
+        s = screen;
+        a += ';s=' + s.width + '*' + s.height
+        a += ';d=' + (s.colorDepth ? s.colorDepth : s.pixelDepth)
+        js = 12 //-->
+
+    </script>
+    <script language="JavaScript1.3">
+        <!--
+        js = 13 //-->
+
+    </script>
+    <script language="JavaScript">
+        <!--
+        d.write('<img src="http://top.list.ru/counter' +
+            '?id=559716;js=' + js + a + ';rand=' + Math.random() +
+            '" height=1 width=1>')
+        if (js > 11) d.write('<' + '!-- ') //-->
+
+    </script><noscript><img
+src="http://top.list.ru/counter?js=na;id=559716"
+height=1 width=1 alt=""></noscript>
+    <script language="JavaScript">
+        <!--
+        if (js > 11) d.write('--' + '>') //-->
+
+    </script>
+    <!--/COUNTER-->
+</body>
+
+</html>

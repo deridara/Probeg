@@ -1,0 +1,7 @@
+.brand {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url(../img/sevastopol_brend.jpg) no-repeat fixed 50% 0%;
+    z-index: 0;
+}
