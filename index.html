@@ -11,95 +11,198 @@
     <title>Портал для любителей бега «ПроБЕГ»</title>
     <link rel="shortcut icon" type="image/png" href="http://probeg.org/dj_static/images/man-square2.png">
     <link rel="apple-touch-icon" href="http://probeg.org/dj_static/images/apple-touch-icon.png" />
-    <link rel="stylesheet" href="http://probeg.org/dj_static/css/bootstrap.min.css" />
+    <!--    <link rel="stylesheet" href="http://probeg.org/dj_static/css/bootstrap.min.css" />-->
     <link rel="stylesheet" href="http://probeg.org/dj_static/css/results.css?14" />
     <link rel="stylesheet" href="http://probeg.org/dj_static/css/likely.css?3" />
     <link rel="stylesheet" href="http://probeg.org/dj_static/css/atc-style-blue.css" />
-<!--    -->
-    <link rel="stylesheet" href="http://probeg.org/dj_static/datatables/datatables.min.css" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://probeg.org/dj_static/datatables/datatables.min.css" />
+    <!--    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-<!--    -->
-    <script src="http://probeg.org/dj_static/js/jquery.js"></script>
+    <!--    -->
+    <!--    <script src="http://probeg.org/dj_static/js/jquery.js"></script>-->
     <script src="http://probeg.org/dj_static/js/results.js?21"></script>
     <script src="http://probeg.org/dj_static/js/likely.js?2"></script>
     <script src="http://probeg.org/dj_static/js/atc.min.js"></script>
     <script src="http://probeg.org/dj_static/datatables/datatables.min.js"></script>
-    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 
 <body>
-   <a href="#" class="brand"></a>
+    <!--    <a href="#" class="brand"></a>-->
     <div class="modal fade" id="modalSendLetter" tabindex="-1" role="dialog"></div>
     <div class="container bg-white">
-        <nav class="navbar navbar-default" style="background-color: #dff0d8;">
-            <div class="container-fluid">
-                <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_menu" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://base.probeg.org/">ПроБЕГ</a></div>
-                <div id="navbar_menu" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Новости</a></li>
-                        <li><a href="/races/">Календарь забегов</a></li>
-                        <li><a href="/runners/name/">Участники забегов</a></li>
-                        <li><a href="/about_new_site/">Новые возможности сайта</a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">КЛБМатч<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/klb/2018/invitation/">КЛБМатч–2018: Приглашение</a></li>
-                                <li><a href="/klb/application/2018/">Индивидуальная заявка</a></li>
-                                <li><a href="/klb/2018/">Текущее положение</a></li>
-                                <li><a href="/klb/events_not_in_match/2018/">Забеги, не учитывающиеся в КЛБМатче</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/payment_form">Заплатить взнос за участие в матче</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/klb/2017/">КЛБМатч–2017: итоговое положение</a></li>
-                                <li><a href="/klb/2016/">КЛБМатч–2016: итоговое положение</a></li>
-                                <li><a href="/klb/calculator/">Расчёт очков</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ещё<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/how_to_add_event/">Добавить новый забег в календарь</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/clubs/">Клубы любителей бега</a></li>
-                                <li><a href="/clubs/about/">Новые возможности для клубов</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/rating/">Рейтинг забегов</a></li>
-                                <li><a href="/results/">Все результаты</a></li>
-                                <li><a href="/news/">Все новости</a></li>
-                                <li><a href="/russia_report/2016/">Отчёт: Бег в России — 2016</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/measurement/">Сертификация трасс</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/sport_classes/">Разрядные нормативы в беге</a></li>
-                                <li><a href="/protocol/">Стандарт протокола</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/about/">О сайте</a></li>
-                                <li><a href="/about_new_site/">Новые возможности сайта</a></li>
-                                <li><a href="/how_to_help/">Как вы можете помочь сайту</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/contacts/">Контактная информация</a></li>
-                                <li><a href="#" id="send_to_info_page">Написать нам письмо</a></li>
-                                <li><a href="/social_links/">Мы в соцсетях</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/login/">Вход</a></li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">ПроБЕГ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/races/">Календарь забегов</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/runners/name/">Участники забегов</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about_new_site/">Новые возможности сайта</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">КЛБМатч </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/klb/2018/invitation/">КЛБМатч–2018: Приглашение</a>
+                            <a class="dropdown-item" href="/klb/application/2018/">Индивидуальная заявка</a>
+                            <a class="dropdown-item" href="/klb/2018/">Текущее положение</a>
+                            <a class="dropdown-item" href="/klb/events_not_in_match/2018/">Забеги, не учитывающиеся в КЛБМатче</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/payment_form">Заплатить взнос за участие в матче</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/klb/2017/">КЛБМатч–2017: итоговое положение</a>
+                            <a class="dropdown-item" href="/klb/2016/">КЛБМатч–2016: итоговое положение</a>
+                            <a class="dropdown-item" href="/klb/calculator/">Расчёт очков</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ещё</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/how_to_add_event/">Добавить новый забег в календарь</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/clubs/">Клубы любителей бега</a>
+                            <a class="dropdown-item" href="/clubs/about/">Новые возможности для клубов</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/rating/">Рейтинг забегов</a>
+                            <a class="dropdown-item" href="/results/">Все результаты</a>
+                            <a class="dropdown-item" href="/russia_report/2016/">Отчёт: Бег в России — 2016</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/measurement/">Сертификация трасс</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/sport_classes/">Разрядные нормативы в беге</a>
+                            <a class="dropdown-item" href="/protocol/">Стандарт протокола</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/about/">О сайте</a>
+                            <a class="dropdown-item" href="/about_new_site/">Новые возможности сайта</a>
+                            <a class="dropdown-item" href="/how_to_help/">Как вы можете помочь сайту</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/contacts/">Контактная информация</a>
+                            <a class="dropdown-item" href="#" id="send_to_info_page">Написать нам письмо</a>
+                            <a class="dropdown-item" href="/social_links/">Мы в соцсетях</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="/login/">Войти</a></li>
+                </ul>
             </div>
-            <!--/.container-fluid -->
         </nav>
-        <div class="row">
-                <h3>Портал для любителей бега «ПроБЕГ»</h3>
-<!--
-                <div class="alert alert-warning" role="alert">
-                    Теперь оплатить участие в КЛБМатче можно
-                    <strong><a href="/payment_form" class="underlined">прямо на нашем сайте</a></strong></div>
--->
+
+        <div class="row justify-content-center"><img src="img/banner.jpg" alt="banner"></div>
+        <div class="row justify-content-center"><img src="img/banner.jpg" alt="banner"></div>
+        <div class="row justify-content-center pt-3">
+            <h3 class='display-4'>Как все было</h3>
         </div>
+        <div class="row justify-content-center pb-3">
+            <h5>Последние отчеты о прошедших стартах</h5>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/1534791881_1.jpg" alt="photo">
+                <h6 class='mt-3'>21-й Лесной марафон "Кумысная поляна"</h6>
+                <p class='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, doloremque delectus quibusdam voluptas est. Laborum accusamus quae ratione eligendi, quaerat officiis cupiditate quisquam rerum hic laudantium repudiandae nemo, deleniti nostrum.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/1534791881_1.jpg" alt="photo">
+                <h6 class='mt-3'>21-й Лесной марафон "Кумысная поляна"</h6>
+                <p class='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, doloremque delectus quibusdam voluptas est. Laborum accusamus quae ratione eligendi, quaerat officiis cupiditate quisquam rerum hic laudantium repudiandae nemo, deleniti nostrum.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/1534791881_1.jpg" alt="photo">
+                <h6 class='mt-3'>21-й Лесной марафон "Кумысная поляна"</h6>
+                <p class='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, doloremque delectus quibusdam voluptas est. Laborum accusamus quae ratione eligendi, quaerat officiis cupiditate quisquam rerum hic laudantium repudiandae nemo, deleniti nostrum.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                <img src="img/1534791881_1.jpg" alt="photo">
+                <h6 class='mt-3'>21-й Лесной марафон "Кумысная поляна"</h6>
+                <p class='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, doloremque delectus quibusdam voluptas est. Laborum accusamus quae ratione eligendi, quaerat officiis cupiditate quisquam rerum hic laudantium repudiandae nemo, deleniti nostrum.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center pt-3">
+            <h3 class='display-4 mb-3'>Выбери себе лучший старт</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-12 bg-gray">
+                <h5 class="text-center mb-3">Пресс-релизы</h5>
+                <img src="img/press.png" alt="banner" class='img-fluid'>
+                <h3 class="text-center mt-3 mb-3">Тверской марафон</h3>
+
+                <table class="table table table-bordered table-sm bg-light text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" colspan="2">2016</th>
+                            <th scope="col" colspan="2">2017</th>
+                            <th scope="col" colspan="2">2018</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="3" class='pt-4'>Финишировало:</th>
+                            <td rowspan="2" class='pt-4'><h5>403</h5></td>
+                            <td>М - 288</td>
+                            <td rowspan="2" class='pt-4'><h5>821</h5></td>
+                            <td>М - 507</td>
+                            <td rowspan="2" class='pt-4'><h5>1001</h5></td>
+                            <td>М - 593</td>
+                        </tr>
+                        <tr>
+                            <td>Ж - 115</td>
+                            <td>Ж - 314</td>
+                            <td>Ж - 408</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum officiis, labore esse iste laborum blanditiis fugit perferendis, quisquam magnam aliquam debitis consequuntur earum nemo, repudiandae excepturi consequatur inventore ut delectus!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor rem quae, placeat quo eligendi aspernatur id, sed alias deserunt, laborum ipsum repellendus temporibus. Vero maiores ab tenetur officia quis natus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda necessitatibus voluptas pariatur fugit harum, accusamus mollitia ad atque, reiciendis, incidunt illo optio fugiat id eum quibusdam minus magnam. Tempora, consequuntur!</p>
+
+            </div>
+            <div class="col-lg-5 col-md-12 bg-light">
+                <h5 class="text-center mb-3">Открылась регистрация</h5>
+                <div class="mb-5">
+                    <img src="img/yoshkar-ola.png" alt="banner" class="float-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, fugit necessitatibus sed saepe fuga, natus non delectus quia quam odit reprehenderit dolorum. Error accusamus nobis sint illo sequi, doloremque adipisci!</p>
+                </div>
+                <div class="mb-5">
+                    <img src="img/yoshkar-ola.png" alt="banner" class="float-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, fugit necessitatibus sed saepe fuga, natus non delectus quia quam odit reprehenderit dolorum. Error accusamus nobis sint illo sequi, doloremque adipisci!</p>
+                </div>
+                <div class="mb-5">
+                    <img src="img/yoshkar-ola.png" alt="banner" class="float-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, fugit necessitatibus sed saepe fuga, natus non delectus quia quam odit reprehenderit dolorum. Error accusamus nobis sint illo sequi, doloremque adipisci!</p>
+                </div>
+            </div>
+        </div>
+
+
         <div class="row">
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <h4>Уже участвуете в соревнованиях?</h4>
@@ -341,7 +444,6 @@
                     <!-- For races page --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3049966672" data-ad-format="auto"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div><br/><br/>
                 <div id="vk_comments_browse"></div>
@@ -354,7 +456,6 @@
                     VK.Widgets.CommentsBrowse('vk_comments_browse', {
                         limit: 10
                     });
-
                 </script>
             </div>
             <div class="col-md-8 col-sm-12 col-xs-12">
@@ -455,7 +556,6 @@
                     <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div>
                 <p></p>
@@ -554,7 +654,6 @@
                     <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div>
                 <p></p>
@@ -653,7 +752,6 @@
                     <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div>
                 <p></p>
@@ -748,7 +846,6 @@
                     <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div>
                 <p></p>
@@ -847,7 +944,6 @@
                     <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-
                     </script>
                 </div>
                 <p></p>
@@ -934,7 +1030,6 @@
             <!-- Flat ad for page bottom --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="3521492278"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-
             </script>
         </div>
         <div class="col-md-9">
@@ -959,7 +1054,6 @@
             <!-- Mobile footer --><ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-9724286909860700" data-ad-slot="9469537076"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-
             </script>
         </div>
         <div class="col-md-9"><a href="https://vk.com/probeg_org"><img src="http://probeg.org/dj_static/images/vk_small_square.png" alt="Наша страница на vk.com"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -1004,7 +1098,6 @@
                 f();
             }
         })(document, window, "yandex_metrika_callbacks2");
-
     </script><noscript><div><img src="https://mc.yandex.ru/watch/38500270" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <script>
@@ -1021,7 +1114,6 @@
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-81201557-1', 'auto');
         ga('send', 'pageview');
-
     </script>
     <!--Rating@Mail.ru COUNTER-->
     <script language="JavaScript">
@@ -1030,13 +1122,11 @@
         a = '';
         a += ';r=' + escape(d.referrer)
         js = 10 //-->
-
     </script>
     <script language="JavaScript1.1">
         <!--
         a += ';j=' + navigator.javaEnabled()
         js = 11 //-->
-
     </script>
     <script language="JavaScript1.2">
         <!--
@@ -1044,12 +1134,10 @@
         a += ';s=' + s.width + '*' + s.height
         a += ';d=' + (s.colorDepth ? s.colorDepth : s.pixelDepth)
         js = 12 //-->
-
     </script>
     <script language="JavaScript1.3">
         <!--
         js = 13 //-->
-
     </script>
     <script language="JavaScript">
         <!--
@@ -1057,14 +1145,12 @@
             '?id=559716;js=' + js + a + ';rand=' + Math.random() +
             '" height=1 width=1>')
         if (js > 11) d.write('<' + '!-- ') //-->
-
     </script><noscript><img
 src="http://top.list.ru/counter?js=na;id=559716"
 height=1 width=1 alt=""></noscript>
     <script language="JavaScript">
         <!--
         if (js > 11) d.write('--' + '>') //-->
-
     </script>
     <!--/COUNTER-->
 </body>
